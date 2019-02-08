@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/ideal-postcodes/ideal-postcodes-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/ideal-postcodes-typings)[![Coverage Status](https://coveralls.io/repos/github/ideal-postcodes/ideal-postcodes-typings/badge.svg?branch=master&t=C3M5nQ)](https://coveralls.io/github/ideal-postcodes/ideal-postcodes-typings?branch=master)
+[![CircleCI](https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/api-typings)
 
 # Ideal Postcodes API Typings
 
