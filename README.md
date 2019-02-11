@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains Typescript interface typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk).
+This repository contains Typescript typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk).
 
 It specifies typings that define:
 
@@ -13,7 +13,7 @@ It specifies typings that define:
 
 The full documentation for these types can be found at [ideal-postcodes.github.io/api-typings](https://ideal-postcodes.github.io/api-typings).
 
-Typings are exported to `index.d.ts` and can be inspected there.
+Typings are exported to `index.d.ts` when published to [npm](https://www.npmjs.com/package/@ideal-postcodes/api-typings). The typings in this repository are defined in `lib/index.ts`.
 
 ### Benefits of Typings
 
