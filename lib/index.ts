@@ -35,7 +35,7 @@ export interface ApiBaseResponse {
  *
  * API response returned in the event of a (non-200) API response
  */
-export interface ApiErrorResponse extends ApiBaseResponse { }
+export interface ApiErrorResponse extends ApiBaseResponse {}
 
 /**
  * ## Api Response With Result
@@ -60,7 +60,7 @@ interface ApiResponseWithResult<T> extends ApiBaseResponse {
  * - UMPRN
  * - Eastings, Northings
  */
-export type AddressNumber = number | "";
+export type AddressNumber = number | string;
 
 /**
  * ## Address
@@ -287,7 +287,7 @@ export interface UmprnAddress extends Address {
   /**
    * UMPRN attribute is always provided by a UMPRN address
    */
-  umprn: number
+  umprn: number;
 }
 
 /**
@@ -303,11 +303,12 @@ export type PostcodeResults = Address[];
  * Response body returned from a successful [postcode query](https://ideal-postcodes.co.uk/documentation/postcodes#postcode)
  *
  * Example request:
- * 
+ *
  * [api.ideal-postcodes.co.uk/v1/postcodes/SW1A2AA](https://api.ideal-postcodes.co.uk/v1/postcodes/SW1A2AA?api_key=iddqd)
  */
-export interface PostcodesResponse extends ApiResponseWithResult<PostcodeResults>, PossiblePaginatedResponse { }
-
+export interface PostcodesResponse
+  extends ApiResponseWithResult<PostcodeResults>,
+    PossiblePaginatedResponse {}
 
 /**
  * ## Address Results
@@ -316,17 +317,18 @@ export interface PostcodesResponse extends ApiResponseWithResult<PostcodeResults
  */
 export type AddressResults = Address[];
 
-
 /**
  * ## Address Query Response Body
  *
  * Response body returned from a successful [address query](https://ideal-postcodes.co.uk/documentation/addresses#query)
  *
  * Example request:
- * 
+ *
  * [api.ideal-postcodes.co.uk/v1/addresses?q=10 downing street london](https://api.ideal-postcodes.co.uk/v1/addresses?api_key=iddqd&q=10%20downing%20street%20london)
  */
-export interface AddressQueryResponse extends ApiResponseWithResult<AddressResults>, PaginatedResponse { }
+export interface AddressQueryResponse
+  extends ApiResponseWithResult<AddressResults>,
+    PaginatedResponse {}
 
 /**
  * ## PossiblePaginatedApiResponseWithResult
@@ -416,10 +418,11 @@ interface AutocompleteHits {
  * Response body returned from a successful [address autocomplete request](https://ideal-postcodes.co.uk/documentaton/autocomplete#query)
  *
  * Example request:
- * 
+ *
  * [api.ideal-postcodes.co.uk/v1/autocomplete/addresses?q=10 downin](https://api.ideal-postcodes.co.uk/v1/autocomplete/addresses?api_key=iddqd&q=10%20downin)
  */
-export interface AddressAutocompleteResponse extends ApiResponseWithResult<AutocompleteHits> { }
+export interface AddressAutocompleteResponse
+  extends ApiResponseWithResult<AutocompleteHits> {}
 
 /**
  * ## Address Suggestion
@@ -428,7 +431,7 @@ export interface AddressAutocompleteResponse extends ApiResponseWithResult<Autoc
  */
 export interface AddressSuggestion {
   /**
-   * Suggestion for your given query, represented as a partial address 
+   * Suggestion for your given query, represented as a partial address
    */
   suggestion: string;
 
@@ -454,10 +457,10 @@ export interface AddressSuggestion {
  * Response body returned from a successful [UDPRN request](https://ideal-postcodes.co.uk/documentation/udprn)
  *
  * Example request:
- * 
+ *
  * [api.ideal-postcodes.co.uk/v1/udprn/8](https://api.ideal-postcodes.co.uk/v1/udprn/8?api_key=iddqd)
  */
-export interface UdprnResponse extends ApiResponseWithResult<Address> { }
+export interface UdprnResponse extends ApiResponseWithResult<Address> {}
 
 /**
  * ## Umprn Response
@@ -465,10 +468,10 @@ export interface UdprnResponse extends ApiResponseWithResult<Address> { }
  * Response body returned from a successful [UMPRN request](https://ideal-postcodes.co.uk/documentation/umprn)
  *
  * Example request:
- * 
+ *
  * [api.ideal-postcodes.co.uk/v1/umprn/50199115](https://api.ideal-postcodes.co.uk/v1/umprn/50199115?api_key=iddqdmr)
  */
-export interface UmprnResponse extends ApiResponseWithResult<UmprnAddress> { }
+export interface UmprnResponse extends ApiResponseWithResult<UmprnAddress> {}
 
 /**
  * ## Daily Limit
@@ -515,7 +518,6 @@ export interface NotificationsConfiguration {
    */
   enabled: boolean;
 }
-
 
 /**
  * ## Automated Topup Configuration
@@ -604,27 +606,27 @@ export interface KeyStatus {
 
 /**
  * Public Key Response Body
- * 
+ *
  * Response body returned from a successful [key check request](https://api.ideal-postcodes.co.uk/documentation/keys#key)
  *
  * Example request:
- * 
+ *
  * [api.ideal-postcodes.co.uk/v1/keys/iddqd](https://api.ideal-postcodes.co.uk/v1/keys/iddqd)
  */
-export interface PublicKeyResponse extends ApiResponseWithResult<KeyStatus> { }
+export interface PublicKeyResponse extends ApiResponseWithResult<KeyStatus> {}
 
 /**
  * ## Private Key Response Body
- * 
+ *
  * Response body returned from a successful [private key information request](https://api.ideal-postcodes.co.uk/documentation/keys#details).
  *
  * Example request:
- * 
+ *
  * ```
  * api.ideal-postcodes.co.uk/v1/keys/iddqd&user_token=secret
  * ```
  */
-export interface PrivateKeyResponse extends ApiResponseWithResult<Key> { }
+export interface PrivateKeyResponse extends ApiResponseWithResult<Key> {}
 
 /**
  * ## Licensee
@@ -658,12 +660,10 @@ export interface Licensee {
    */
   postcode: string;
 
-
   /**
    * Date/Time when the licensee was created
    */
   createdAt: string;
-
 
   /**
    * A list of allowed URLs
@@ -684,7 +684,7 @@ export interface LicenseeDailyLimit {
    * Maximum number of lookups a licensee can perform in a day
    */
   limit: number;
-  
+
   /**
    * Number of lookups performed by licensee today
    */
@@ -707,12 +707,11 @@ export interface NewLicensee {
    */
   name: string;
 
-
   /**
    * Licensee address
    */
   address: string;
-  
+
   /**
    * Licensee postcode
    */
@@ -745,7 +744,7 @@ export interface NewLicenseeDailyLimit {
  * api.ideal-postcodes.co.uk/v1/licensees/sl_iiijoi932bs8sD?user_token=secret
  * ```
  */
-export interface LicenseeResponseBody extends ApiResponseWithResult<Licensee> { }
+export interface LicenseeResponseBody extends ApiResponseWithResult<Licensee> {}
 
 /**
  * ## Licensees Response Body
@@ -758,7 +757,8 @@ export interface LicenseeResponseBody extends ApiResponseWithResult<Licensee> { 
  * api.ideal-postcodes.co.uk/v1/licensees?user_token=secret
  * ```
  */
-export interface LicenseesResponseBody extends ApiResponseWithResult<Licensee> { }
+export interface LicenseesResponseBody
+  extends ApiResponseWithResult<Licensee> {}
 
 export interface PaginatedLicenseesList {
   /**
@@ -794,5 +794,4 @@ interface DeletionStatus {
  *
  * Response body returned from a successful deletion request. For instance, [licensee cancellation](https://ideal-postcodes.co.uk/documentation/licensees#delete)
  */
-interface DeletionResponseBody extends ApiResponseWithResult<DeletionStatus> { }
-
+interface DeletionResponseBody extends ApiResponseWithResult<DeletionStatus> {}

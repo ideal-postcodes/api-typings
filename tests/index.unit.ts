@@ -13,8 +13,13 @@
  */
 
 import { assert } from "chai";
-import { postcodes, errors } from "@ideal-postcodes/api-fixtures";
-import { ApiBaseResponse, ApiErrorResponse } from "../lib/index";
+import { postcodes, addresses, errors } from "@ideal-postcodes/api-fixtures";
+import {
+  ApiBaseResponse,
+  ApiErrorResponse,
+  AddressNumber,
+  Address
+} from "../lib/index";
 
 describe("Typings", () => {
   describe("ApiBaseResponse", () => {
@@ -33,6 +38,27 @@ describe("Typings", () => {
       error = errors.dailyLimitReached.body;
       error = errors.invalidKey.body;
       error = errors.invalidUrl.body;
+    });
+  });
+
+  describe("AddressNumber", () => {
+    it("can be assigned to number or empty string", () => {
+      const n: AddressNumber = 8;
+      const s: AddressNumber = "";
+    });
+  });
+
+  describe("Address", () => {
+    it("can be assigned to PAF address response", () => {
+      let address: Address;
+      addresses.success.body.result.hits.forEach(a => (address = a));
+    });
+
+    it("can be assigned to MR address response", () => {
+      let mrAddress: Address;
+      addresses.multipleResidence.success.body.result.hits.forEach(
+        a => (mrAddress = a)
+      );
     });
   });
 });
