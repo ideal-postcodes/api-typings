@@ -11,15 +11,21 @@
  * The describe/it mocha syntax, while not actually testing an code (as there
  * is none in lib/) is a means to document which interfaces have been tested.
  */
-
-import { assert } from "chai";
 import { postcodes, addresses, errors } from "@ideal-postcodes/api-fixtures";
 import {
   ApiBaseResponse,
   ApiErrorResponse,
   AddressNumber,
-  Address
+  Address,
+  UmprnAddress,
+  PostcodeResults,
+  PostcodesResponse,
 } from "../lib/index";
+
+// Aliases for test fixtures
+const postcodeResults = postcodes.success.body.result;
+const postcodeMrResults = postcodes.multipleResidence.success.body.result;
+const mrAddressQueryHits = addresses.multipleResidence.success.body.result.hits;
 
 describe("Typings", () => {
   describe("ApiBaseResponse", () => {
@@ -56,9 +62,34 @@ describe("Typings", () => {
 
     it("can be assigned to MR address response", () => {
       let mrAddress: Address;
-      addresses.multipleResidence.success.body.result.hits.forEach(
-        a => (mrAddress = a)
-      );
+      mrAddressQueryHits.forEach(a => (mrAddress = a));
+    });
+  });
+
+  describe("UmprnAddress", () => {
+    it("Can be assigned to a MR address", () => {
+      let address: UmprnAddress;
+      mrAddressQueryHits.forEach(a => (address = a));
+    });
+  });
+
+  describe("PostcodeResults", () => {
+    it("can be assigned to a list of addresses", () => {
+      const results: PostcodeResults = postcodeResults;
+    });
+
+    it("can be assigned to a list of multiple residence addresses", () => {
+      const results: PostcodeResults = postcodeMrResults;
+    });
+  });
+
+  describe("PostcodesResponse", () => {
+    it("can be assigned to a postcode lookup", () => {
+      const response: PostcodesResponse = postcodes.success.body;
+    });
+    it("can be assigned to a paginated multiple residence lookup", () => {
+      const response: PostcodesResponse =
+        postcodes.multipleResidence.success.body;
     });
   });
 });
