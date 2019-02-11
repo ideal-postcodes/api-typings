@@ -17,6 +17,7 @@ import {
   autocomplete,
   udprn,
   umprn,
+  keys,
   errors,
 } from "@ideal-postcodes/api-fixtures";
 
@@ -35,6 +36,8 @@ import {
   AddressAutocompleteResponse,
   UdprnResponse,
   UmprnResponse,
+  KeyStatus,
+  PublicKeyResponse,
 } from "../lib/index";
 
 // Aliases for test fixtures
@@ -185,5 +188,18 @@ describe("Typings", () => {
     it("can be assigned to a UMPRN response", () => {
       const response: UmprnResponse = umprn.success.body;
     });
+  });
+
+  describe("Purchase", () => {
+    it("can be assigned to an active purchase");
+    it("can be assigned to an inactive purchase (i.e. opened_at = null)");
+  });
+
+  describe("Key", () => {
+    it("can be assigned to a private key result");
+  });
+
+  describe("PrivateKeyResponse", () => {
+    it("can be assigned to a private key response");
   });
 });
