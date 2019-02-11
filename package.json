@@ -10,7 +10,7 @@
   "scripts": {
     "test": "npm run lint && NODE_ENV=test node_modules/.bin/mocha --opts mocha.opts",
     "lint": "node_modules/.bin/tslint -c tslint.json -p tsconfig.json lib/**/*.ts",
-    "build": "npm run lint && node_modules/.bin/tsc",
+    "build": "npm run test && node_modules/.bin/tsc",
     "docs": "./node_modules/.bin/typedoc --mode file --target ES3 --out docs/ --name 'Ideal Postcodes API Typings' --includeDeclarations --theme minimal --excludePrivate --hideGenerator --excludeExternals lib/",
     "prepare": "npm run build"
   },
