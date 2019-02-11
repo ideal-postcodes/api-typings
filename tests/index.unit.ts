@@ -31,9 +31,9 @@ import {
   PostcodesResponse,
   AddressResults,
   AddressQueryResponse,
-  SuggestionResults,
+  AddressSuggestionResults,
   AddressSuggestion,
-  AddressAutocompleteResponse,
+  AddressSuggestionResponse,
   UdprnResponse,
   UmprnResponse,
   KeyStatus,
@@ -41,8 +41,6 @@ import {
 } from "../lib/index";
 
 // Aliases for test fixtures
-const postcodeResults = postcodes.success.body.result;
-const postcodeMrResults = postcodes.multipleResidence.success.body.result;
 const mrAddressQueryHits = addresses.multipleResidence.success.body.result.hits;
 
 describe("Typings", () => {
@@ -82,24 +80,29 @@ describe("Typings", () => {
 
     it("can be assigned to MR address response", () => {
       let mrAddress: Address;
-      mrAddressQueryHits.forEach(a => (mrAddress = a));
+      addresses.multipleResidence.success.body.result.hits.forEach(
+        a => (mrAddress = a)
+      );
     });
   });
 
   describe("UmprnAddress", () => {
     it("Can be assigned to a MR address", () => {
       let address: UmprnAddress;
-      mrAddressQueryHits.forEach(a => (address = a));
+      addresses.multipleResidence.success.body.result.hits.forEach(
+        a => (address = a)
+      );
     });
   });
 
   describe("PostcodeResults", () => {
     it("can be assigned to a list of addresses", () => {
-      const results: PostcodeResults = postcodeResults;
+      const results: PostcodeResults = postcodes.success.body.result;
     });
 
     it("can be assigned to a list of multiple residence addresses", () => {
-      const results: PostcodeResults = postcodeMrResults;
+      const results: PostcodeResults =
+        postcodes.multipleResidence.success.body.result;
     });
   });
 
@@ -139,29 +142,31 @@ describe("Typings", () => {
     });
   });
 
-  describe("SuggestionResults", () => {
+  describe("AddressSuggestionResults", () => {
     it("can be assigned to an address suggestion response", () => {
-      const response: SuggestionResults = autocomplete.success.body.result.hits;
+      const response: AddressSuggestionResults =
+        autocomplete.success.body.result.hits;
     });
     it("can be assigned to a Multiple Residence address suggestion response", () => {
-      const response: SuggestionResults =
+      const response: AddressSuggestionResults =
         autocomplete.multipleResidence.success.body.result.hits;
     });
     it("can be assigned to an empty suggestion response", () => {
-      const response: SuggestionResults = autocomplete.empty.body.result.hits;
+      const response: AddressSuggestionResults =
+        autocomplete.empty.body.result.hits;
     });
   });
 
-  describe("AddressAutocompleteResponse", () => {
+  describe("AddressSuggestionResponse", () => {
     it("can be assigned to an address suggestion response", () => {
-      const response: AddressAutocompleteResponse = autocomplete.success.body;
+      const response: AddressSuggestionResponse = autocomplete.success.body;
     });
     it("can be assigned to a Multiple Residence address suggestion response", () => {
-      const response: AddressAutocompleteResponse =
+      const response: AddressSuggestionResponse =
         autocomplete.multipleResidence.success.body;
     });
     it("can be assigned to an empty suggestion response", () => {
-      const response: AddressAutocompleteResponse = autocomplete.empty.body;
+      const response: AddressSuggestionResponse = autocomplete.empty.body;
     });
   });
 

@@ -404,7 +404,7 @@ export interface SuggestionUrls {
  *
  * Autocomplete requests will return a list of address suggestion objects inside a hits attribute
  */
-export type SuggestionResults = AddressSuggestion[];
+export type AddressSuggestionResults = AddressSuggestion[];
 
 /**
  * ## Autocomplete Hits
@@ -412,7 +412,7 @@ export type SuggestionResults = AddressSuggestion[];
  * Autocomplete requests will return a list of address suggestion objects inside a hits attribute
  */
 interface AutocompleteHits {
-  hits: SuggestionResults;
+  hits: AddressSuggestionResults;
 }
 
 /**
@@ -424,7 +424,7 @@ interface AutocompleteHits {
  *
  * [api.ideal-postcodes.co.uk/v1/autocomplete/addresses?q=10 downin](https://api.ideal-postcodes.co.uk/v1/autocomplete/addresses?api_key=iddqd&q=10%20downin)
  */
-export interface AddressAutocompleteResponse
+export interface AddressSuggestionResponse
   extends ApiResponseWithResult<AutocompleteHits> {}
 
 /**
