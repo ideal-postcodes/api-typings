@@ -15,6 +15,8 @@ import {
   postcodes,
   addresses,
   autocomplete,
+  udprn,
+  umprn,
   errors,
 } from "@ideal-postcodes/api-fixtures";
 
@@ -31,6 +33,8 @@ import {
   SuggestionResults,
   AddressSuggestion,
   AddressAutocompleteResponse,
+  UdprnResponse,
+  UmprnResponse,
 } from "../lib/index";
 
 // Aliases for test fixtures
@@ -166,6 +170,18 @@ describe("Typings", () => {
       autocomplete.multipleResidence.success.body.result.hits.forEach(
         s => (suggestion = s)
       );
+    });
+  });
+
+  describe("UdprnResponse", () => {
+    it("can be assigned to a UDPRN response", () => {
+      const response: UdprnResponse = udprn.success.body;
+    });
+  });
+
+  describe("UmprnResponse", () => {
+    it("can be assigned to a UMPRN response", () => {
+      const response: UmprnResponse = umprn.success.body;
     });
   });
 });
