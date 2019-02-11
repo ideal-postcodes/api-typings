@@ -11,7 +11,13 @@
  * The describe/it mocha syntax, while not actually testing an code (as there
  * is none in lib/) is a means to document which interfaces have been tested.
  */
-import { postcodes, addresses, errors } from "@ideal-postcodes/api-fixtures";
+import {
+  postcodes,
+  addresses,
+  autocomplete,
+  errors,
+} from "@ideal-postcodes/api-fixtures";
+
 import {
   ApiBaseResponse,
   ApiErrorResponse,
@@ -22,6 +28,9 @@ import {
   PostcodesResponse,
   AddressResults,
   AddressQueryResponse,
+  SuggestionResults,
+  AddressSuggestion,
+  AddressAutocompleteResponse,
 } from "../lib/index";
 
 // Aliases for test fixtures
@@ -118,6 +127,45 @@ describe("Typings", () => {
     });
     it("can be assigned to an empty query", () => {
       const response: AddressQueryResponse = addresses.empty.body;
+    });
+  });
+
+  describe("SuggestionResults", () => {
+    it("can be assigned to an address suggestion response", () => {
+      const response: SuggestionResults = autocomplete.success.body.result.hits;
+    });
+    it("can be assigned to a Multiple Residence address suggestion response", () => {
+      const response: SuggestionResults =
+        autocomplete.multipleResidence.success.body.result.hits;
+    });
+    it("can be assigned to an empty suggestion response", () => {
+      const response: SuggestionResults = autocomplete.empty.body.result.hits;
+    });
+  });
+
+  describe("AddressAutocompleteResponse", () => {
+    it("can be assigned to an address suggestion response", () => {
+      const response: AddressAutocompleteResponse = autocomplete.success.body;
+    });
+    it("can be assigned to a Multiple Residence address suggestion response", () => {
+      const response: AddressAutocompleteResponse =
+        autocomplete.multipleResidence.success.body;
+    });
+    it("can be assigned to an empty suggestion response", () => {
+      const response: AddressAutocompleteResponse = autocomplete.empty.body;
+    });
+  });
+
+  describe("AddressSuggestion", () => {
+    it("can be assigned to an address suggestion", () => {
+      let suggestion: AddressSuggestion;
+      autocomplete.success.body.result.hits.forEach(s => (suggestion = s));
+    });
+    it("can be assigned to a Multiple Residence suggestion", () => {
+      let suggestion: AddressSuggestion;
+      autocomplete.multipleResidence.success.body.result.hits.forEach(
+        s => (suggestion = s)
+      );
     });
   });
 });
