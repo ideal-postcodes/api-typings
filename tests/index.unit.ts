@@ -202,4 +202,41 @@ describe("Typings", () => {
   describe("PrivateKeyResponse", () => {
     it("can be assigned to a private key response");
   });
+
+  describe("KeyStatus", () => {
+    it("can be assigned to a key available API response", () => {
+      const keyStatus: KeyStatus = keys.check.available.body.result;
+    });
+  });
+
+  describe("PublicKeyResponse", () => {
+    it("can be assigned to a key available API response", () => {
+      const publicKeyResponse: PublicKeyResponse = keys.check.available.body;
+    });
+  });
+
+  describe("Licensee", () => {
+    it("can be assigned to an API licensee object");
+  });
+
+  describe("New Licensee", () => {
+    it("can be assigned to a new licensee payload");
+  });
+
+  describe("LicenseeResponseBody", () => {
+    it("can be assigned to a licensee retrieval response");
+  });
+
+  describe("LicenseesResponseBody", () => {
+    it("can be assigned to a licensees request");
+    it("can be assigned to an empty licensees request");
+  });
+
+  describe("PaginatedLicenseesList", () => {
+    it("can be assigned to a paginated licensees list");
+  });
+
+  describe("deletionResponseBody", () => {
+    it("can be assigned to a licensee deletion response");
+  });
 });
