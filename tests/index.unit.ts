@@ -59,6 +59,8 @@ describe("Typings", () => {
       error = errors.dailyLimitReached.body;
       error = errors.invalidKey.body;
       error = errors.invalidUrl.body;
+      error = udprn.notFound.body;
+      error = umprn.notFound.body;
     });
   });
 
