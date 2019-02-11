@@ -317,6 +317,10 @@ export interface PostcodesResponse
  */
 export type AddressResults = Address[];
 
+interface AddressQueryResults extends PaginatedResponse {
+  hits: AddressResults;
+}
+
 /**
  * ## Address Query Response Body
  *
@@ -327,8 +331,7 @@ export type AddressResults = Address[];
  * [api.ideal-postcodes.co.uk/v1/addresses?q=10 downing street london](https://api.ideal-postcodes.co.uk/v1/addresses?api_key=iddqd&q=10%20downing%20street%20london)
  */
 export interface AddressQueryResponse
-  extends ApiResponseWithResult<AddressResults>,
-    PaginatedResponse {}
+  extends ApiResponseWithResult<AddressQueryResults> {}
 
 /**
  * ## PossiblePaginatedApiResponseWithResult

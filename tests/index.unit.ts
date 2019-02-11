@@ -20,6 +20,8 @@ import {
   UmprnAddress,
   PostcodeResults,
   PostcodesResponse,
+  AddressResults,
+  AddressQueryResponse,
 } from "../lib/index";
 
 // Aliases for test fixtures
@@ -90,6 +92,32 @@ describe("Typings", () => {
     it("can be assigned to a paginated multiple residence lookup", () => {
       const response: PostcodesResponse =
         postcodes.multipleResidence.success.body;
+    });
+  });
+
+  describe("AddressResults", () => {
+    it("can be assigned to a list of address results", () => {
+      const results: AddressResults = addresses.success.body.result.hits;
+    });
+    it("can be assigned to a list of multiple residence address results", () => {
+      const results: AddressResults =
+        addresses.multipleResidence.success.body.result.hits;
+    });
+    it("can be assigned to an empty result set", () => {
+      const results: AddressResults = addresses.empty.body.result.hits;
+    });
+  });
+
+  describe("AddressQueryResponse", () => {
+    it("can be assigned to a successful query", () => {
+      const response: AddressQueryResponse = addresses.success.body;
+    });
+    it("can be assigned to a successful Multiple Residence query", () => {
+      const response: AddressQueryResponse =
+        addresses.multipleResidence.success.body;
+    });
+    it("can be assigned to an empty query", () => {
+      const response: AddressQueryResponse = addresses.empty.body;
     });
   });
 });
