@@ -1,10 +1,4 @@
 /**
- * API Typings
- *
- * Typings for HTTP responses from api.ideal-postcodes.co.uk
- */
-
-/**
  * ## Api Base Response
  * @hidden
  *
@@ -75,205 +69,241 @@ export type AddressNumber = number | string;
 export interface Address {
   /**
    * Postcode
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#postcode
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#postcode](https://ideal-postcodes.co.uk/documentation/paf-data/#postcode)
    */
   postcode: string;
 
   /**
    * Inward Postcode
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#postcode_inward
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#postcode_inward](https://ideal-postcodes.co.uk/documentation/paf-data/#postcode_inward)
    */
   postcode_inward: string;
 
   /**
    * Outward Postcode
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#postcode_outward
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#postcode_outward](https://ideal-postcodes.co.uk/documentation/paf-data/#postcode_outward)
    */
   postcode_outward: string;
 
   /**
    * Post Town
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#post_town
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#post_town](https://ideal-postcodes.co.uk/documentation/paf-data/#post_town)
    */
   post_town: string;
 
   /**
    * Dependant Locality
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#dependant_locality
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#dependant_locality](https://ideal-postcodes.co.uk/documentation/paf-data/#dependant_locality)
    */
   dependant_locality: string;
 
   /**
    * Double Dependant Locality
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#double_dependant_locality
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#double_dependant_locality](https://ideal-postcodes.co.uk/documentation/paf-data/#double_dependant_locality)
    */
   double_dependant_locality: string;
 
   /**
    * Thoroughfare
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#thoroughfare
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#thoroughfare](https://ideal-postcodes.co.uk/documentation/paf-data/#thoroughfare)
    */
   thoroughfare: string;
 
   /**
    * Dependant Thoroughfare
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#dependant_thoroughfare
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#dependant_thoroughfare](https://ideal-postcodes.co.uk/documentation/paf-data/#dependant_thoroughfare)
    */
   dependant_thoroughfare: string;
 
   /**
    * Building Number
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#building_number
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#building_number](https://ideal-postcodes.co.uk/documentation/paf-data/#building_number)
    */
   building_number: string;
 
   /**
    * Building Name
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#building_name
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#building_name](https://ideal-postcodes.co.uk/documentation/paf-data/#building_name)
    */
   building_name: string;
 
   /**
    * Sub Building Name
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#sub_building_name
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#sub_building_name](https://ideal-postcodes.co.uk/documentation/paf-data/#sub_building_name)
    */
   sub_building_name: string;
 
   /**
    * PO Box
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#po_box
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#po_box](https://ideal-postcodes.co.uk/documentation/paf-data/#po_box)
    */
   po_box: string;
 
   /**
    * Department Name
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#department_name
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#department_name](https://ideal-postcodes.co.uk/documentation/paf-data/#department_name)
    */
   department_name: string;
 
   /**
    * Organisation Name
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#organisation_name
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#organisation_name](https://ideal-postcodes.co.uk/documentation/paf-data/#organisation_name)
    */
   organisation_name: string;
 
   /**
    * UDPRN
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#udprn
+   *
+   * Unique ID provided to a premise in Royal Mail's Postcode Address File
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#udprn](https://ideal-postcodes.co.uk/documentation/paf-data/#udprn)
    */
   udprn: number;
 
   /**
    * UMPRN
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#umprn
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#umprn](https://ideal-postcodes.co.uk/documentation/paf-data/#umprn)
    */
   umprn?: AddressNumber;
 
   /**
    * Postcode Type
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#postcode_type
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#postcode_type](https://ideal-postcodes.co.uk/documentation/paf-data/#postcode_type)
    */
   postcode_type: string;
 
   /**
    * SU Organisation Indicator
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#su_organisation_indicator
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#su_organisation_indicator](https://ideal-postcodes.co.uk/documentation/paf-data/#su_organisation_indicator)
    */
   su_organisation_indicator: string;
 
   /**
    * Delivery Point Suffix
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#delivery_point_suffix
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#delivery_point_suffix](https://ideal-postcodes.co.uk/documentation/paf-data/#delivery_point_suffix)
    */
   delivery_point_suffix: string;
 
   /**
    * Address Line 1
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#line_1
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#line_1](https://ideal-postcodes.co.uk/documentation/paf-data/#line_1)
    */
   line_1: string;
 
   /**
    * Address Line 2
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#line_2
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#line_2](https://ideal-postcodes.co.uk/documentation/paf-data/#line_2)
    */
   line_2: string;
 
   /**
    * Address Line 3
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#line_3
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#line_3](https://ideal-postcodes.co.uk/documentation/paf-data/#line_3)
    */
   line_3: string;
 
   /**
    * Premise
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#premise
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#premise](https://ideal-postcodes.co.uk/documentation/paf-data/#premise)
    */
   premise: string;
 
   /**
    * Longitude
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#longitude
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#longitude](https://ideal-postcodes.co.uk/documentation/paf-data/#longitude)
    */
   longitude: AddressNumber;
 
   /**
    * Latitude
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#latitude
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#latitude](https://ideal-postcodes.co.uk/documentation/paf-data/#latitude)
    */
   latitude: AddressNumber;
 
   /**
    * Eastings
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#eastings
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#eastings](https://ideal-postcodes.co.uk/documentation/paf-data/#eastings)
    */
   eastings: AddressNumber;
 
   /**
    * Northings
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#northings
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#northings](https://ideal-postcodes.co.uk/documentation/paf-data/#northings)
    */
   northings: AddressNumber;
 
   /**
    * Country
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#country
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#country](https://ideal-postcodes.co.uk/documentation/paf-data/#country)
    */
   country: string;
 
   /**
    * Traditional County
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#traditional_county
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#traditional_county](https://ideal-postcodes.co.uk/documentation/paf-data/#traditional_county)
    */
   traditional_county: string;
 
   /**
    * Administrative County
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#administrative_county
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#administrative_county](https://ideal-postcodes.co.uk/documentation/paf-data/#administrative_county)
    */
   administrative_county: string;
 
   /**
    * Postal County
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#postal_county
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#postal_county](https://ideal-postcodes.co.uk/documentation/paf-data/#postal_county)
    */
   postal_county: string;
 
   /**
    * County
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#county
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#county](https://ideal-postcodes.co.uk/documentation/paf-data/#county)
    */
   county: string;
 
   /**
    * District
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#district
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#district](https://ideal-postcodes.co.uk/documentation/paf-data/#district)
    */
   district: string;
 
   /**
    * Ward
-   * https://ideal-postcodes.co.uk/documentation/paf-data/#ward
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data/#ward](https://ideal-postcodes.co.uk/documentation/paf-data/#ward)
    */
   ward: string;
 }
