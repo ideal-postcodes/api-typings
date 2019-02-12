@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git@github.com:ideal-postcodes/api-typings"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "types": "./index.d.ts",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test node_modules/.bin/mocha --opts mocha.opts",
