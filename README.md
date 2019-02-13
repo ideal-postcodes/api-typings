@@ -11,25 +11,7 @@ It specifies typings that define:
 - The basic JSON objects returned by our APIs (e.g. addresses `Address`, autocomplete suggestions `AddressSuggestion`, API key status `KeyStatus`)
 - The overall shape of JSON responses returned by the API (e.g. postcode lookups `PostcodesResponse`, address autocomplete queries `AddressSuggestionResponse`, address search queries `AddressQueryResponse`)
 
-The full documentation for these types can be found at [ideal-postcodes.github.io/api-typings](https://ideal-postcodes.github.io/api-typings).
-
 Typings are exported to `index.d.ts` when published to [npm](https://www.npmjs.com/package/@ideal-postcodes/api-typings). The typings in this repository are defined in `lib/index.ts`.
-
-### Benefits of Typings
-
-This typings repository allows you create Typescript integrations, which gives you the added benefits of static typing. Namely,
-
-- Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries
-- A foundation for IDEs to provide a richer, more productive environment to develop integrations against our HTTP API and client libraries. API typings facilitate code completion, inline documentation and type checking inside of a supported editor
-- The ability to refactor code that integrates against our APIs and client libraries with greater speed and confidence
-
-### Non-Typescript Projects
-
-Your integration does not have to be exclusively Typescript driven to benefit from this typings repository. 
-
-Some IDEs (e.g. Visual Studio, Visual Studio Code or Sublime Text) can use Typescript typings to provide inline code completion and documentation for plain JavaScript files. 
-
-It is also possible to develop a piecemeal, robust Typescript integration against our services and subsequently incorporate it in a larger JavaScript project. Typescript compiles down to plain JavaScript which can conform to ES3 and later. That output can be exported to other JavaScript projects.
 
 ### Usage
 
@@ -41,10 +23,50 @@ npm install --save-dev @ideal-postcodes/api-typings
 
 Import interfaces and other definitions
 
-```javascript
-// E.g. Using the address type to 
-import { Address } from "ideal-postcodes-typings";
+```typescript
+// Import Address type
+import { Address } from "@ideal-postcodes/api-typings";
+
+let address: Address;
 ```
+
+![Typings Demo](https://img.ideal-postcodes.co.uk/api-typings/demo.svg)
+
+### Links
+
+- [Project Repository](https://github.com/ideal-postcodes/api-typings)
+- [Project Documentation](https://ideal-postcodes.github.io/api-typings)
+- [npm module](https://www.npmjs.com/package/@ideal-postcodes/api-typings)
+
+## Benefits of Typings
+
+### Code Completion
+
+Typings allow IDEs to provide a richer, more productive environment to develop integrations. This includes providing code completions and suggestions.
+
+![Autocomplete](https://img.ideal-postcodes.co.uk/api-typings/autocomplete.png)
+
+### Type Checking
+
+Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries
+
+![Type Checking](https://img.ideal-postcodes.co.uk/api-typings/type_checking.svg)
+
+### Inline Documentation
+
+Our typings also bear documentation which can be rendered in your IDE as you work.
+
+![VS Docs](https://img.ideal-postcodes.co.uk/api-typings/documentation.png)
+
+![Docs](https://img.ideal-postcodes.co.uk/api-typings/documentation.svg)
+
+### Non-Typescript Projects
+
+Your integration does not have to be exclusively Typescript driven to benefit from this typings repository. 
+
+Some IDEs (e.g. Visual Studio, Visual Studio Code, Sublime Text) use Typescript typings to provide inline code completion and documentation for plain JavaScript files. 
+
+It is also possible to develop a partial, robust Typescript integration against our services and subsequently incorporate it in a larger JavaScript project. Typescript compiles down to plain JavaScript which can conform to ES3 and later. That output can be exported to other JavaScript projects.
 
 ## Testing
 
