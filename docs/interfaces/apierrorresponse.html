@@ -1029,7 +1029,8 @@ img { max-width: 100%; }
 				<div class="lead">
 					<h2 id="api-error-response-body">API Error Response Body</h2>
 				</div>
-				<p>API response returned in the event of a (non-200) API response</p>
+				<p>API response returned in the event of a (non-200) API response.</p>
+				<p>An error has occurred if the HTTP status code is not 200. Errors can range from the a benign 404 (resource not found) to more urgent errors (your API Key ran out of credit, failed authentication, etc).</p>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
@@ -1068,12 +1069,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiBaseResponse.code</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L25">index.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L19">index.ts:19</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Custom response code returned by API</p>
+						<p>Custom response code returned by API.</p>
 					</div>
 					<p>The response codes first 3 digits, reflects the HTTP status. e.g. <code>2000</code> would accompany a <code>200 OK</code> HTTP status.</p>
 					<p>We do not recommend performing <code>&gt;</code> or <code>&lt;</code> type comparison operations on <code>code</code> even though its type is <code>number</code>. This prohibits us from producing more than 10 response codes per HTTP status.</p>
@@ -1086,12 +1087,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiBaseResponse.message</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L30">index.ts:30</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L24">index.ts:24</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Human readable success or error message returned by API</p>
+						<p>Human readable success or error message returned by API.</p>
 					</div>
 				</div>
 			</section>

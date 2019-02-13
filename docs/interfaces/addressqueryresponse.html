@@ -1032,8 +1032,10 @@ img { max-width: 100%; }
 				<div class="lead">
 					<h2 id="address-query-response-body">Address Query Response Body</h2>
 				</div>
-				<p>Response body returned from a successful <a href="https://ideal-postcodes.co.uk/documentation/addresses#query">address query</a></p>
-				<p>Example request:</p>
+				<p>Response body returned from a successful address query</p>
+				<p>Note that the address query API will not return a 404 response if no results are found (unlike the postcode lookup API). Instead an empty array is returned.</p>
+				<p>API Documentation for <code>addresses?query=</code>: <a href="https://ideal-postcodes.co.uk/documentation/addresses#query">ideal-postcodes.co.uk/documentation/addresses#query</a>.</p>
+				<p>Example Request:</p>
 				<p><a href="https://api.ideal-postcodes.co.uk/v1/addresses?api_key=iddqd&amp;q=10%20downing%20street%20london">api.ideal-postcodes.co.uk/v1/addresses?q=10 downing street london</a></p>
 			</div>
 		</section>
@@ -1074,12 +1076,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiBaseResponse.code</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L25">index.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L19">index.ts:19</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Custom response code returned by API</p>
+						<p>Custom response code returned by API.</p>
 					</div>
 					<p>The response codes first 3 digits, reflects the HTTP status. e.g. <code>2000</code> would accompany a <code>200 OK</code> HTTP status.</p>
 					<p>We do not recommend performing <code>&gt;</code> or <code>&lt;</code> type comparison operations on <code>code</code> even though its type is <code>number</code>. This prohibits us from producing more than 10 response codes per HTTP status.</p>
@@ -1092,12 +1094,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiBaseResponse.message</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L30">index.ts:30</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L24">index.ts:24</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Human readable success or error message returned by API</p>
+						<p>Human readable success or error message returned by API.</p>
 					</div>
 				</div>
 			</section>
@@ -1108,7 +1110,7 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiResponseWithResult.result</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L50">index.ts:50</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L47">index.ts:47</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
