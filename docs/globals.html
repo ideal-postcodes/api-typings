@@ -1026,25 +1026,34 @@ img { max-width: 100%; }
 				<li>The basic JSON objects returned by our APIs (e.g. addresses <code>Address</code>, autocomplete suggestions <code>AddressSuggestion</code>, API key status <code>KeyStatus</code>)</li>
 				<li>The overall shape of JSON responses returned by the API (e.g. postcode lookups <code>PostcodesResponse</code>, address autocomplete queries <code>AddressSuggestionResponse</code>, address search queries <code>AddressQueryResponse</code>)</li>
 			</ul>
-			<p>The full documentation for these types can be found at <a href="https://ideal-postcodes.github.io/api-typings">ideal-postcodes.github.io/api-typings</a>.</p>
 			<p>Typings are exported to <code>index.d.ts</code> when published to <a href="https://www.npmjs.com/package/@ideal-postcodes/api-typings">npm</a>. The typings in this repository are defined in <code>lib/index.ts</code>.</p>
-			<h3 id="benefits-of-typings">Benefits of Typings</h3>
-			<p>This typings repository allows you create Typescript integrations, which gives you the added benefits of static typing. Namely,</p>
-			<ul>
-				<li>Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries</li>
-				<li>A foundation for IDEs to provide a richer, more productive environment to develop integrations against our HTTP API and client libraries. API typings facilitate code completion, inline documentation and type checking inside of a supported editor</li>
-				<li>The ability to refactor code that integrates against our APIs and client libraries with greater speed and confidence</li>
-			</ul>
-			<h3 id="non-typescript-projects">Non-Typescript Projects</h3>
-			<p>Your integration does not have to be exclusively Typescript driven to benefit from this typings repository. </p>
-			<p>Some IDEs (e.g. Visual Studio, Visual Studio Code or Sublime Text) can use Typescript typings to provide inline code completion and documentation for plain JavaScript files. </p>
-			<p>It is also possible to develop a piecemeal, robust Typescript integration against our services and subsequently incorporate it in a larger JavaScript project. Typescript compiles down to plain JavaScript which can conform to ES3 and later. That output can be exported to other JavaScript projects.</p>
 			<h3 id="usage">Usage</h3>
 			<p>Install package</p>
 			<pre><code class="language-bash">npm install --save-dev @ideal-postcodes/api-typings</code></pre>
 			<p>Import interfaces and other definitions</p>
-			<pre><code class="language-javascript"><span class="hljs-comment">// E.g. Using the address type to </span>
-<span class="hljs-keyword">import</span> { Address } <span class="hljs-keyword">from</span> <span class="hljs-string">"ideal-postcodes-typings"</span>;</code></pre>
+			<pre><code class="language-typescript"><span class="hljs-comment">// Import Address type</span>
+<span class="hljs-keyword">import</span> { Address } <span class="hljs-keyword">from</span> <span class="hljs-string">"@ideal-postcodes/api-typings"</span>;
+
+<span class="hljs-keyword">let</span> address: Address;</code></pre>
+			<h3 id="links">Links</h3>
+			<ul>
+				<li><a href="https://github.com/ideal-postcodes/api-typings">Project Repository</a></li>
+				<li><a href="https://ideal-postcodes.github.io/api-typings">Project Documentation</a></li>
+				<li><a href="https://www.npmjs.com/package/@ideal-postcodes/api-typings">npm module</a></li>
+			</ul>
+			<h2 id="benefits-of-typings">Benefits of Typings</h2>
+			<h3 id="code-completion">Code Completion</h3>
+			<p>Typings allow IDEs to provide a richer, more productive environment to develop integrations. This includes providing code completions and suggestions.</p>
+			<p><img src="https://img.ideal-postcodes.co.uk/api-typings/autocomplete.png" alt="Autocomplete"></p>
+			<h3 id="inline-documentation">Inline Documentation</h3>
+			<p>Our typings also bear documentation which can be rendered in your IDE as you work.</p>
+			<p><img src="https://img.ideal-postcodes.co.uk/api-typings/documentation.png" alt="VS Docs"></p>
+			<h3 id="type-checking">Type Checking</h3>
+			<p>Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries</p>
+			<h3 id="non-typescript-projects">Non-Typescript Projects</h3>
+			<p>Your integration does not have to be exclusively Typescript driven to benefit from this typings repository. </p>
+			<p>Some IDEs (e.g. Visual Studio, Visual Studio Code, Sublime Text) use Typescript typings to provide inline code completion and documentation for plain JavaScript files. </p>
+			<p>It is also possible to develop a partial, robust Typescript integration against our services and subsequently incorporate it in a larger JavaScript project. Typescript compiles down to plain JavaScript which can conform to ES3 and later. That output can be exported to other JavaScript projects.</p>
 			<h2 id="testing">Testing</h2>
 			<p>The testing process involves attempting to compile a test file which assigns <a href="https://github.com/ideal-postcodes/api-fixtures">API fixtures</a> generated by the API to the interfaces exported by this typings library. The tests will fail to compile if the API fixtures fail to conform to types.</p>
 			<pre><code class="language-bash">npm <span class="hljs-built_in">test</span></code></pre>
@@ -1111,7 +1120,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Address<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L60">index.ts:60</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/1df4805/lib/index.ts#L60">index.ts:60</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1133,7 +1142,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Address<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/address.html" class="tsd-signature-type">Address</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L356">index.ts:356</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/1df4805/lib/index.ts#L356">index.ts:356</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1149,7 +1158,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Address<wbr>Suggestion<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/addresssuggestion.html" class="tsd-signature-type">AddressSuggestion</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L454">index.ts:454</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/1df4805/lib/index.ts#L454">index.ts:454</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1165,7 +1174,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Licensees<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/licensee.html" class="tsd-signature-type">Licensee</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L844">index.ts:844</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/1df4805/lib/index.ts#L844">index.ts:844</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1180,7 +1189,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Postcode<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/address.html" class="tsd-signature-type">Address</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L334">index.ts:334</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/1df4805/lib/index.ts#L334">index.ts:334</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">

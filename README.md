@@ -30,8 +30,6 @@ import { Address } from "@ideal-postcodes/api-typings";
 let address: Address;
 ```
 
-![Typings Demo](https://img.ideal-postcodes.co.uk/api-typings/demo.svg)
-
 ### Links
 
 - [Project Repository](https://github.com/ideal-postcodes/api-typings)
@@ -46,19 +44,15 @@ Typings allow IDEs to provide a richer, more productive environment to develop i
 
 ![Autocomplete](https://img.ideal-postcodes.co.uk/api-typings/autocomplete.png)
 
-### Type Checking
-
-Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries
-
-![Type Checking](https://img.ideal-postcodes.co.uk/api-typings/type_checking.svg)
-
 ### Inline Documentation
 
 Our typings also bear documentation which can be rendered in your IDE as you work.
 
 ![VS Docs](https://img.ideal-postcodes.co.uk/api-typings/documentation.png)
 
-![Docs](https://img.ideal-postcodes.co.uk/api-typings/documentation.svg)
+### Type Checking
+
+Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries
 
 ### Non-Typescript Projects
 
