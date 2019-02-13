@@ -1020,14 +1020,14 @@ img { max-width: 100%; }
 			<p><a href="https://circleci.com/gh/ideal-postcodes/api-typings"><img src="https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg" alt="CircleCI"></a></p>
 			<h1 id="ideal-postcodes-api-typings">Ideal Postcodes API Typings</h1>
 			<h2 id="overview">Overview</h2>
-			<p>This repository contains Typescript interface typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk).</p>
+			<p>This repository contains Typescript typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk).</p>
 			<p>It specifies typings that define:</p>
 			<ul>
 				<li>The basic JSON objects returned by our APIs (e.g. addresses <code>Address</code>, autocomplete suggestions <code>AddressSuggestion</code>, API key status <code>KeyStatus</code>)</li>
 				<li>The overall shape of JSON responses returned by the API (e.g. postcode lookups <code>PostcodesResponse</code>, address autocomplete queries <code>AddressSuggestionResponse</code>, address search queries <code>AddressQueryResponse</code>)</li>
 			</ul>
 			<p>The full documentation for these types can be found at <a href="https://ideal-postcodes.github.io/api-typings">ideal-postcodes.github.io/api-typings</a>.</p>
-			<p>Typings are exported to <code>index.d.ts</code> and can be inspected there.</p>
+			<p>Typings are exported to <code>index.d.ts</code> when published to <a href="https://www.npmjs.com/package/@ideal-postcodes/api-typings">npm</a>. The typings in this repository are defined in <code>lib/index.ts</code>.</p>
 			<h3 id="benefits-of-typings">Benefits of Typings</h3>
 			<p>This typings repository allows you create Typescript integrations, which gives you the added benefits of static typing. Namely,</p>
 			<ul>
@@ -1112,19 +1112,19 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Address<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L63">index.ts:63</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L60">index.ts:60</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<h2 id="address-number">Address Number</h2>
 					</div>
-					<p>Some numbers which may not be populated on a premise will return empty string <code>&quot;&quot;</code> instead of <code>null</code> or <code>0</code>. Please be mindful of this behaviour</p>
+					<p>Some numbers which may not be populated on a premise will return empty string <code>&quot;&quot;</code> instead of <code>null</code> or <code>0</code>.</p>
 					<p>Instances of <code>AddressNumber</code> include:</p>
 					<ul>
 						<li>Longitude, Latitude</li>
-						<li>UMPRN</li>
 						<li>Eastings, Northings</li>
+						<li>UMPRN</li>
 					</ul>
 				</div>
 			</section>
@@ -1134,14 +1134,14 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Address<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/address.html" class="tsd-signature-type">Address</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L318">index.ts:318</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L356">index.ts:356</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<h2 id="address-results">Address Results</h2>
 					</div>
-					<p>Address queries will return a list of Address premises</p>
+					<p>Address queries will return a list of Address premises.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
@@ -1150,7 +1150,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Address<wbr>Suggestion<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/addresssuggestion.html" class="tsd-signature-type">AddressSuggestion</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L407">index.ts:407</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L454">index.ts:454</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1166,7 +1166,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Licensees<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/licensee.html" class="tsd-signature-type">Licensee</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L781">index.ts:781</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L844">index.ts:844</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1181,14 +1181,14 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Postcode<wbr>Results<span class="tsd-signature-symbol">:</span> <a href="interfaces/address.html" class="tsd-signature-type">Address</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L298">index.ts:298</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L334">index.ts:334</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<h2 id="postcode-results">Postcode Results</h2>
 					</div>
-					<p>Postcode results are represneted as an array of addresses</p>
+					<p>Postcode results are represented as an array of addresses</p>
 				</div>
 			</section>
 		</section>

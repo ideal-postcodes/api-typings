@@ -1039,10 +1039,11 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<h2 id="postcodes-response-body">Postcodes Response Body</h2>
+					<h2 id="postcodes-lookup-response-body">Postcodes Lookup Response Body</h2>
 				</div>
-				<p>Response body returned from a successful <a href="https://ideal-postcodes.co.uk/documentation/postcodes#postcode">postcode query</a></p>
-				<p>Example request:</p>
+				<p>Response body returned from a successful postcode lookup API request.</p>
+				<p>API Documentation for <code>postcodes/:postcode</code>: <a href="https://ideal-postcodes.co.uk/documentation/postcodes#postcode">ideal-postcodes.co.uk/documentation/postcodes#postcode</a>.</p>
+				<p>Example Request:</p>
 				<p><a href="https://api.ideal-postcodes.co.uk/v1/postcodes/SW1A2AA?api_key=iddqd">api.ideal-postcodes.co.uk/v1/postcodes/SW1A2AA</a></p>
 			</div>
 		</section>
@@ -1089,12 +1090,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiBaseResponse.code</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L25">index.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L19">index.ts:19</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Custom response code returned by API</p>
+						<p>Custom response code returned by API.</p>
 					</div>
 					<p>The response codes first 3 digits, reflects the HTTP status. e.g. <code>2000</code> would accompany a <code>200 OK</code> HTTP status.</p>
 					<p>We do not recommend performing <code>&gt;</code> or <code>&lt;</code> type comparison operations on <code>code</code> even though its type is <code>number</code>. This prohibits us from producing more than 10 response codes per HTTP status.</p>
@@ -1107,14 +1108,14 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from PossiblePaginatedResponse.limit</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L363">index.ts:363</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L405">index.ts:405</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Maximum number of results per page</p>
+						<p>Maximum number of results per page.</p>
 					</div>
-					<p>Exposed in the event a request can be paginated</p>
+					<p>Exposed in the event a request can be paginated.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
@@ -1124,12 +1125,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiBaseResponse.message</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L30">index.ts:30</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L24">index.ts:24</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Human readable success or error message returned by API</p>
+						<p>Human readable success or error message returned by API.</p>
 					</div>
 				</div>
 			</section>
@@ -1140,14 +1141,14 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from PossiblePaginatedResponse.page</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L349">index.ts:349</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L391">index.ts:391</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Current page number</p>
+						<p>Current page number.</p>
 					</div>
-					<p>Exposed in the event a request can be paginated</p>
+					<p>Exposed in the event a request can be paginated.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
@@ -1157,7 +1158,7 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from ApiResponseWithResult.result</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L50">index.ts:50</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L47">index.ts:47</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1173,14 +1174,14 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from PossiblePaginatedResponse.total</p>
 					<ul>
-						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/074892d/lib/index.ts#L356">index.ts:356</a></li>
+						<li>Defined in <a href="https://github.com/ideal-postcodes/api-typings/blob/2e42e28/lib/index.ts#L398">index.ts:398</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Total number of results.</p>
 					</div>
-					<p>Exposed in the event a request can be paginated</p>
+					<p>Exposed in the event a request can be paginated.</p>
 				</div>
 			</section>
 		</section>
