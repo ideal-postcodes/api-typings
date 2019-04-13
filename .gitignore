@@ -62,3 +62,4 @@ dist
 
 # index.d.ts is generated just after npm publish
 index.d.ts
+docs
