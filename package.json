@@ -1,9 +1,19 @@
 {
   "name": "@ideal-postcodes/api-typings",
   "description": "Typings and other useful javascript abstractions for interacting with the Ideal-Postcodes.co.uk API",
+  "author": {
+    "name": "Ideal Postcodes",
+    "email": "support@ideal-postcodes.co.uk",
+    "url": "https://ideal-postcodes.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/ideal-postcodes/api-typings/issues",
+    "email": "support@ideal-postcodes.co.uk"
+  },
+  "homepage": "https://github.com/ideal-postcodes/api-typings",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ideal-postcodes/api-typings"
+    "url": "https://github.com/ideal-postcodes/api-typings.git"
   },
   "version": "1.0.1",
   "types": "./index.d.ts",
@@ -28,7 +38,6 @@
   "prettier": {
     "trailingComma": "es5"
   },
-  "author": "Ideal Postcodes",
   "license": "MIT",
   "devDependencies": {
     "@ideal-postcodes/api-fixtures": "~0.0.3",
