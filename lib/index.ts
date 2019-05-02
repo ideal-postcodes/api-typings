@@ -1,6 +1,5 @@
 /**
  * ## Api Base Response
- * @hidden
  *
  * Basic API response shape provided by the API.
  *
