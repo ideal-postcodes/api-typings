@@ -537,7 +537,7 @@ export interface DailyLimit {
   /**
    * Maximum number of requests permitted on key.
    */
-  limit: number;
+  limit: number | null;
 
   /**
    * Number of requests performed today which count towards daily limit.
@@ -554,7 +554,7 @@ export interface IndividualLimit {
   /**
    * Maximum number of requests for a given IP Address per day.
    */
-  limit: number;
+  limit: number | null;
 }
 
 /**
@@ -742,7 +742,7 @@ export interface LicenseeDailyLimit {
   /**
    * Maximum number of lookups a licensee can perform in a day.
    */
-  limit: number;
+  limit: number | null;
 
   /**
    * Number of lookups performed by licensee today.
