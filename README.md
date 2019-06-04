@@ -2,8 +2,6 @@
   <img src="https://img.ideal-postcodes.co.uk/API%20Typings%20Logo@3x.png" alt="Ideal Postcodes API Typings">
 </h1>
 
-# Ideal Postcodes API Typings
-
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/api-typings)
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings)
 
