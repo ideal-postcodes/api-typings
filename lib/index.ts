@@ -682,10 +682,66 @@ export interface PublicKeyResponse extends ApiResponseWithResult<KeyStatus> {}
  * Example Request:
  *
  * ```
- * api.ideal-postcodes.co.uk/v1/keys/iddqd&user_token=secret
+ * api.ideal-postcodes.co.uk/v1/keys/iddqd?user_token=secret
  * ```
  */
 export interface PrivateKeyResponse extends ApiResponseWithResult<Key> {}
+
+/**
+ * ## Daily Count
+ *
+ * Represents the transaction usage count of an API Key for a given day
+ */
+export interface DailyCount {
+  /**
+   * The day of count
+   */
+  date: string;
+  /**
+   * Total number of transactions for a given date
+   */
+  count: number;
+}
+
+/**
+ * ## API Usage Results
+ *
+ * Represents historical daily transaction usage data for a given API Key for a given time interval
+ */
+export interface KeyUsage {
+  /**
+   * Start date of data interval
+   */
+  start: string;
+  /**
+   * End date of data interval
+   */
+  end: string;
+  /**
+   * Total number of lookups performed in time interval
+   */
+  total: number;
+
+  /**
+   * Breakdown of transaction usage by day
+   */
+  dailyCount: DailyCount[];
+}
+
+/**
+ * ## Key Usage Body
+ *
+ * Response body returned from a successful API Key usage request.
+ *
+ * API Documentation for `keys/:key?user_token=`: [ideal-postcodes.co.uk/documentation/keys#usage](https://ideal-postcodes.co.uk/documentation/keys#usage).
+ *
+ * Example Request:
+ *
+ * ```
+ * api.ideal-postcodes.co.uk/v1/keys/iddqd/usage?user_token=secret
+ * ```
+ */
+export interface KeyUsageResponse extends ApiResponseWithResult<KeyUsage> {}
 
 /**
  * ## Licensee

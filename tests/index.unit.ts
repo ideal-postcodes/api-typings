@@ -40,6 +40,7 @@ import {
   PrivateKeyResponse,
   PublicKeyResponse,
   Key,
+  KeyUsageResponse,
 } from "../lib/index";
 
 // Aliases for test fixtures
@@ -223,6 +224,12 @@ describe("Typings", () => {
   describe("PublicKeyResponse", () => {
     it("can be assigned to a key available API response", () => {
       const publicKeyResponse: PublicKeyResponse = keys.check.available.body;
+    });
+  });
+
+  describe("KeyUsageResponse", () => {
+    it("can be assigned to a key usage API response", () => {
+      const response: KeyUsageResponse = keys.usage.success.body;
     });
   });
 
