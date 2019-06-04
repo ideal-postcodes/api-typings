@@ -1,6 +1,11 @@
-[![CircleCI](https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/api-typings)
+<h1 align="center">
+  <img src="https://img.ideal-postcodes.co.uk/API%20Typings%20Logo@3x.png" alt="Ideal Postcodes API Typings">
+</h1>
 
 # Ideal Postcodes API Typings
+
+[![CircleCI](https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/api-typings)
+[![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings)
 
 ## Overview
 
@@ -42,13 +47,9 @@ let address: Address;
 
 Typings allow IDEs to provide a richer, more productive environment to develop integrations. This includes providing code completions and suggestions.
 
-![Autocomplete](https://img.ideal-postcodes.co.uk/api-typings/autocomplete.png)
-
 ### Inline Documentation
 
 Our typings also bear documentation which can be rendered in your IDE as you work.
-
-![VS Docs](https://img.ideal-postcodes.co.uk/api-typings/documentation.png)
 
 ### Type Checking
 
