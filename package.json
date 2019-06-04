@@ -18,6 +18,7 @@
   "version": "1.0.1",
   "types": "./index.d.ts",
   "scripts": {
+    "semantic-release": "node_modules/.bin/semantic-release --no-ci",
     "test": "npm run lint && NODE_ENV=test node_modules/.bin/mocha",
     "lint": "node_modules/.bin/tslint -c tslint.json -p tsconfig.json lib/**/*.ts",
     "build": "npm run test && node_modules/.bin/tsc",
@@ -40,13 +41,18 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@cablanchard/semantic-release": "~1.2.1",
     "@ideal-postcodes/api-fixtures": "~0.0.3",
     "@types/mocha": "~5.2.5",
     "mocha": "~6.1.1",
+    "semantic-release": "~15.13.12",
     "ts-node": "~8.2.0",
     "tslint": "~5.17.0",
     "typedoc": "~0.14.2",
     "typescript": "~3.5.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "release": {
+    "extends": "@cablanchard/semantic-release/dist/npm"
+  }
 }
