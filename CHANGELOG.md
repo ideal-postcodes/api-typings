@@ -1,7 +1,3 @@
-# Changelog
-
-Any changes, including backwards incompatible changes will be listed here
-
 ## 1.0.1 (12/02/2019)
 
 - Fix module import
