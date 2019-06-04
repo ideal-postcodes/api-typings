@@ -42,7 +42,7 @@
   "license": "MIT",
   "devDependencies": {
     "@cablanchard/semantic-release": "~1.2.1",
-    "@ideal-postcodes/api-fixtures": "~0.0.3",
+    "@ideal-postcodes/api-fixtures": "~0.1.0",
     "@types/mocha": "~5.2.5",
     "mocha": "~6.1.1",
     "semantic-release": "~15.13.12",
