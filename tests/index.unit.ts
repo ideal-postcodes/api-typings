@@ -37,7 +37,9 @@ import {
   UdprnResponse,
   UmprnResponse,
   KeyStatus,
+  PrivateKeyResponse,
   PublicKeyResponse,
+  Key,
 } from "../lib/index";
 
 // Aliases for test fixtures
@@ -201,11 +203,15 @@ describe("Typings", () => {
   });
 
   describe("Key", () => {
-    it("can be assigned to a private key result");
+    it("can be assigned to a private key result", () => {
+      const key: Key = keys.private.success.body.result;
+    });
   });
 
   describe("PrivateKeyResponse", () => {
-    it("can be assigned to a private key response");
+    it("can be assigned to a private key response", () => {
+      const response: PrivateKeyResponse = keys.private.success.body;
+    });
   });
 
   describe("KeyStatus", () => {
