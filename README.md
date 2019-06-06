@@ -2,14 +2,12 @@
   <img src="https://img.ideal-postcodes.co.uk/API%20Typings%20Logo@3x.png" alt="Ideal Postcodes API Typings">
 </h1>
 
+> typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk)
+
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/api-typings)
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings)
 
-## Overview
-
-This repository contains Typescript typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk).
-
-It specifies typings that define:
+Typescript typings which define:
 
 - The basic JSON objects returned by our APIs (e.g. addresses `Address`, autocomplete suggestions `AddressSuggestion`, API key status `KeyStatus`)
 - The overall shape of JSON responses returned by the API (e.g. postcode lookups `PostcodesResponse`, address autocomplete queries `AddressSuggestionResponse`, address search queries `AddressQueryResponse`)
