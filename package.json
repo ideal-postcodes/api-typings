@@ -44,7 +44,7 @@
     "@cablanchard/semantic-release": "~1.2.1",
     "@ideal-postcodes/api-fixtures": "~0.1.0",
     "@types/mocha": "~5.2.5",
-    "mocha": "~6.1.1",
+    "mocha": "~6.2.0",
     "semantic-release": "~15.13.12",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
