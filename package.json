@@ -26,7 +26,7 @@
     "prepare": "npm run build"
   },
   "engines": {
-    "node": ">=8.0"
+    "node": ">=12.0"
   },
   "mocha": {
     "spec": "tests/*.ts",
@@ -43,8 +43,9 @@
   "devDependencies": {
     "@cablanchard/semantic-release": "~1.3.0",
     "@ideal-postcodes/api-fixtures": "~1.1.0",
-    "@types/mocha": "~7.0.1",
-    "mocha": "~7.2.0",
+    "@types/mocha": "~7.0.2",
+    "mocha": "~8.0.1",
+    "semantic-release": "~17.0.7",
     "semantic-release": "~17.1.0",
     "ts-node": "~8.10.1",
     "tslint": "~6.1.0",
