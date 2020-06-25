@@ -4,7 +4,8 @@
 
 > Typings for the Ideal Postcodes API (api.ideal-postcodes.co.uk)
 
-[![CircleCI](https://circleci.com/gh/ideal-postcodes/api-typings.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/api-typings)
+![CI](https://github.com/ideal-postcodes/api-typings/workflows/CI/badge.svg)
+![Release](https://github.com/ideal-postcodes/api-typings/workflows/Release/badge.svg)
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings)
 
 Typescript typings which define:
