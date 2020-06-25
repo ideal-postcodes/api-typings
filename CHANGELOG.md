@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/ideal-postcodes/api-typings/compare/1.1.0...2.0.0) (2020-06-25)
+
+
+* Merge pull request #136 from ideal-postcodes/dependabot/npm_and_yarn/mocha-8.0.1 ([10f340a](https://github.com/ideal-postcodes/api-typings/commit/10f340a)), closes [#136](https://github.com/ideal-postcodes/api-typings/issues/136)
+
+
+### chore
+
+* **Node:** Drop explicit support for Node 8 ([9e417fa](https://github.com/ideal-postcodes/api-typings/commit/9e417fa))
+
+
+### BREAKING CHANGES
+
+* Node 8 no longer forms part of CI testing
+* **Node:** Node 8 no longer forms part of CI testing
+
 # [1.1.0](https://github.com/ideal-postcodes/api-typings/compare/1.0.1...1.1.0) (2019-06-04)
 
 
