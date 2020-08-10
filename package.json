@@ -48,7 +48,7 @@
     "semantic-release": "~17.1.0",
     "ts-node": "~8.10.1",
     "tslint": "~6.1.0",
-    "typedoc": "~0.17.0",
+    "typedoc": "~0.18.0",
     "typescript": "~3.9.2"
   },
   "dependencies": {},
