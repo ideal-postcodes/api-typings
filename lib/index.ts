@@ -267,7 +267,7 @@ export interface Address {
    *
    * [ideal-postcodes.co.uk/documentation/paf-data/#country](https://ideal-postcodes.co.uk/documentation/paf-data/#country)
    */
-  country: string;
+  country: Country;
 
   /**
    * Traditional County
@@ -918,3 +918,16 @@ interface DeletionStatus {
  * API Documentation for `DELETE licensees/:licensee`: [ideal-postcodes.co.uk/documentation/licensees#delete](https://ideal-postcodes.co.uk/documentation/licensees#delete).
  */
 interface DeletionResponseBody extends ApiResponseWithResult<DeletionStatus> {}
+
+/**
+ * ## Countries
+ *
+ * See our guide on [Supported Territories](https://ideal-postcodes.co.uk/guides/supported-territories) to find out more
+ */
+export type Country =
+  | "Isle of Man"
+  | "England"
+  | "Scotland"
+  | "Wales"
+  | "Northern Ireland"
+  | "Channel Islands";
