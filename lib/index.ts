@@ -170,6 +170,15 @@ export interface Address {
   organisation_name: string;
 
   /**
+   * UPRN
+   *
+   * UPRN stands for Unique Property Reference Number and was created by the Ordnance Survey (OS). Local governments in the UK have allocated a unique number for each land or property.
+   *
+   * [ideal-postcodes.co.uk/documentation/paf-data#uprn_code](https://ideal-postcodes.co.uk/documentation/paf-data#uprn_code)
+   */
+  uprn: AddressNumber;
+
+  /**
    * UDPRN
    *
    * Unique ID provided to a premise in Royal Mail's Postcode Address File.
