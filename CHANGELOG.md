@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ideal-postcodes/api-typings/compare/2.0.0...2.0.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* **UPRN:** Add uprn to fixtures ([618564c](https://github.com/ideal-postcodes/api-typings/commit/618564c))
+
 # [2.0.0](https://github.com/ideal-postcodes/api-typings/compare/1.1.0...2.0.0) (2020-06-25)
 
 
