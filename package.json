@@ -22,7 +22,7 @@
     "test": "npm run lint && NODE_ENV=test node_modules/.bin/mocha",
     "lint": "node_modules/.bin/tslint -c tslint.json -p tsconfig.json lib/**/*.ts",
     "build": "npm run test && node_modules/.bin/tsc",
-    "docs": "./node_modules/.bin/typedoc --mode file --target ES3 --out docs/ --name 'Ideal Postcodes API Typings' --includeDeclarations --theme minimal --excludePrivate --hideGenerator --composite lib/index.ts --excludeExternals lib/",
+    "docs": "typedoc",
     "prepare": "npm run build"
   },
   "engines": {
@@ -43,12 +43,13 @@
   "devDependencies": {
     "@cablanchard/semantic-release": "~1.3.0",
     "@ideal-postcodes/api-fixtures": "~1.2.0",
+    "@ideal-postcodes/doc-assets": "~1.0.3",
     "@types/mocha": "~8.2.0",
     "mocha": "~8.3.0",
     "semantic-release": "~17.4.1",
     "ts-node": "~9.1.0",
     "tslint": "~6.1.0",
-    "typedoc": "~0.19.0",
+    "typedoc": "~0.20.30",
     "typescript": "~4.0.2"
   },
   "dependencies": {},
