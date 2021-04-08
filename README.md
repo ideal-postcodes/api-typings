@@ -8,7 +8,7 @@
 ![Release](https://github.com/ideal-postcodes/api-typings/workflows/Release/badge.svg)
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fapi-typings)
 
-Typescript typings which define:
+TypeScript typings which define:
 
 - The basic JSON objects returned by our APIs (e.g. addresses `Address`, autocomplete suggestions `AddressSuggestion`, API key status `KeyStatus`)
 - The overall shape of JSON responses returned by the API (e.g. postcode lookups `PostcodesResponse`, address autocomplete queries `AddressSuggestionResponse`, address search queries `AddressQueryResponse`)
@@ -52,13 +52,13 @@ Our typings also bear documentation which can be rendered in your IDE as you wor
 
 Compile time checks that your library or application appropriately consumes objects and data types returned by our APIs and client libraries
 
-### Non-Typescript Projects
+### Non-TypeScript Projects
 
-Your integration does not have to be exclusively Typescript driven to benefit from this typings repository. 
+Your integration does not have to be exclusively TypeScript driven to benefit from this typings repository.
 
-Some IDEs (e.g. Visual Studio, Visual Studio Code, Sublime Text) use Typescript typings to provide inline code completion and documentation for plain JavaScript files. 
+Some IDEs (e.g. Visual Studio, Visual Studio Code, Sublime Text) use TypeScript typings to provide inline code completion and documentation for plain JavaScript files.
 
-It is also possible to develop a partial, robust Typescript integration against our services and subsequently incorporate it in a larger JavaScript project. Typescript compiles down to plain JavaScript which can conform to ES3 and later. That output can be exported to other JavaScript projects.
+It is also possible to develop a partial, robust TypeScript integration against our services and subsequently incorporate it in a larger JavaScript project. TypeScript compiles down to plain JavaScript which can conform to ES3 and later. That output can be exported to other JavaScript projects.
 
 ## Testing
 
@@ -71,4 +71,3 @@ npm test
 ## Licence
 
 MIT
-
