@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/ideal-postcodes/api-typings.git"
   },
-  "version": "2.0.1",
+  "version": "2.1.0",
   "types": "./index.d.ts",
   "scripts": {
     "semantic-release": "node_modules/.bin/semantic-release --no-ci",
