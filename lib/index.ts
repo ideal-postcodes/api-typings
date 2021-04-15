@@ -354,7 +354,7 @@ export type PostcodeResults = Address[];
  */
 export interface PostcodesResponse
   extends ApiResponseWithResult<PostcodeResults>,
-    PossiblePaginatedResponse {}
+    PaginatedResponse {}
 
 /**
  * ## Address Results
@@ -384,55 +384,27 @@ export interface AddressQueryResponse
   extends ApiResponseWithResult<AddressQueryResults> {}
 
 /**
- * ## PossiblePaginatedApiResponseWithResult
- *
- * @hidden
- *
- * Some requests may expose the pagination elements `page`, `limit`, and `total` such as an address query, or postcode lookup with the multiple residence dataset.
+ * Requests exposes the pagination elements `page`, `limit`, and `total` such as an address query, or postcode lookup with the multiple residence dataset.
  */
-interface PossiblePaginatedResponse {
+interface PaginatedResponse {
   /**
    * Current page number.
    *
    * Exposed in the event a request can be paginated.
    */
-  page?: number;
-
-  /**
-   * Total number of results.
-   *
-   * Exposed in the event a request can be paginated.
-   */
-  total?: number;
-
-  /**
-   * Maximum number of results per page.
-   *
-   * Exposed in the event a request can be paginated.
-   */
-  limit?: number;
-}
-
-/**
- * PaginatedResponse
- *
- * @hidden
- *
- * Enforces pagination attributes on interface
- */
-interface PaginatedResponse {
-  /**
-   * Current page number
-   */
   page: number;
 
   /**
    * Total number of results.
+   *
+   * Exposed in the event a request can be paginated.
    */
   total: number;
 
   /**
    * Maximum number of results per page.
+   *
+   * Exposed in the event a request can be paginated.
    */
   limit: number;
 }
