@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/ideal-postcodes/api-typings/compare/2.0.1...2.1.0) (2021-04-15)
+
+
+### Features
+
+* **Postcodes:** Add page, total and limit attr ([f6306e4](https://github.com/ideal-postcodes/api-typings/commit/f6306e4de79c108c89778c2aa42b05536db3821f))
+
 ## [2.0.1](https://github.com/ideal-postcodes/api-typings/compare/2.0.0...2.0.1) (2020-10-12)
 
 
