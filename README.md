@@ -1,3 +1,5 @@
+> Deprecated in favour of our OpenAPI repository which also ships TypeScript typings
+
 <h1 align="center">
   <img src="https://img.ideal-postcodes.co.uk/API%20Typings%20Logo@3x.png" alt="Ideal Postcodes API Typings">
 </h1>
@@ -35,7 +37,6 @@ let address: Address;
 ### Links
 
 - [Project Repository](https://github.com/ideal-postcodes/api-typings)
-- [Project Documentation](https://api-typings.ideal-postcodes.dev)
 - [npm module](https://www.npmjs.com/package/@ideal-postcodes/api-typings)
 
 ## Benefits of Typings
